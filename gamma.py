@@ -72,9 +72,7 @@ def create_tos_script():
         tos_scripts = f'\n\n#### {symbol} ####\n'
 
         for level in levels:
-            # Remove the combos
-            if ('combo' not in level.lower()):
-                tos_scripts += get_line(symbol, level, levels[level])
+            tos_scripts += get_line(symbol, level, levels[level])
 
         f.write(tos_scripts)
 
